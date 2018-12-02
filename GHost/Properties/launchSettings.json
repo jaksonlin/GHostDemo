@@ -1,10 +1,7 @@
 {
   "profiles": {
     "GHost": {
-      "commandName": "Project",
-      "environmentVariables": {
-        "GHost_environment": "ggg"
-      }
+      "commandName": "Project"
     }
   }
 }

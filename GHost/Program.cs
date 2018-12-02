@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 namespace GHost
@@ -49,7 +50,21 @@ namespace GHost
                 })
                 .UseConsoleLifetime()
                 .Build();
-            await host.RunAsync();
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                if (args.Length > 0 && args[0].Equals("debug"))
+                {
+                    host.Start();
+                }
+                else
+                {
+                    host.RunAsService();
+                }
+            }else
+            {
+
+                await host.RunAsync();
+            }
         }
     }
     internal class DevSettings
