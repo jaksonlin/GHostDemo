@@ -1,0 +1,16 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Error",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  },
+  "Test1": {
+    "V1": 888,
+    "V2": 666,
+    "V3": {
+      "G1": 3434
+    }
+  }
+}

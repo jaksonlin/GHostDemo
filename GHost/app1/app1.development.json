@@ -1,0 +1,16 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  },
+  "Test1": {
+    "V1": 123,
+    "V2": 345,
+    "V3": {
+      "G1": 999
+    }
+  }
+}
